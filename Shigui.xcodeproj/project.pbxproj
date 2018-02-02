@@ -7,23 +7,62 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F00AEE0200CE8620082CD08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F62E48620062374005E5DBC /* Localizable.strings */; };
+		7F00AEE1200CEA430082CD08 /* Orbitron in Resources */ = {isa = PBXBuildFile; fileRef = 7F00AEDA200CE21C0082CD08 /* Orbitron */; };
+		7F00AEE3200CEA960082CD08 /* Orbitron-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F00AEE2200CEA960082CD08 /* Orbitron-Bold.ttf */; };
+		7F34B0EC20187A8B00F5ABC4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34B0EB20187A8B00F5ABC4 /* HomeViewController.swift */; };
+		7F34B0EE20187B3C00F5ABC4 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34B0ED20187B3C00F5ABC4 /* ChangePasswordViewController.swift */; };
+		7F34B0F02018884F00F5ABC4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34B0EF2018884F00F5ABC4 /* MapViewController.swift */; };
 		7F62E46220060492005E5DBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62E46120060492005E5DBC /* AppDelegate.swift */; };
-		7F62E46420060492005E5DBC /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F62E46320060492005E5DBC /* art.scnassets */; };
 		7F62E46620060492005E5DBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62E46520060492005E5DBC /* ViewController.swift */; };
 		7F62E46920060492005E5DBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F62E46720060492005E5DBC /* Main.storyboard */; };
 		7F62E46B20060492005E5DBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F62E46A20060492005E5DBC /* Assets.xcassets */; };
 		7F62E46E20060492005E5DBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F62E46C20060492005E5DBC /* LaunchScreen.storyboard */; };
+		7F62E4762006051E005E5DBC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62E4752006051E005E5DBC /* RegisterViewController.swift */; };
+		7F62E478200608BE005E5DBC /* myAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62E477200608BE005E5DBC /* myAppTools.swift */; };
+		7F62E48B20062E89005E5DBC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62E48A20062E89005E5DBC /* LoginViewController.swift */; };
+		7FCB6F372015FDAC00C87731 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB6F362015FDAC00C87731 /* ProfileViewController.swift */; };
+		7FCB6F392015FDE400C87731 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB6F382015FDE400C87731 /* ShopViewController.swift */; };
+		7FCB6F3B2015FE3000C87731 /* ValuationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB6F3A2015FE3000C87731 /* ValuationsViewController.swift */; };
+		7FCB6F3D2015FE5300C87731 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB6F3C2015FE5300C87731 /* FavouritesViewController.swift */; };
+		7FCB6F3F201601B600C87731 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB6F3E201601B600C87731 /* SettingsViewController.swift */; };
+		7FF3F3C82010CE2800E0FB11 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3F3C72010CE2800E0FB11 /* ForgotPasswordViewController.swift */; };
+		7FFDBF9F200F6E76002FC041 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDBF9E200F6E76002FC041 /* WelcomeViewController.swift */; };
+		E13667C5B4251C035746EF66 /* Pods_Shigui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C6DD9E956EAA66DDDAA7A0 /* Pods_Shigui.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03C6DD9E956EAA66DDDAA7A0 /* Pods_Shigui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shigui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62799F93077A8468466953E8 /* Pods-Shigui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shigui.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shigui/Pods-Shigui.debug.xcconfig"; sourceTree = "<group>"; };
+		7F00AEDA200CE21C0082CD08 /* Orbitron */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Orbitron; sourceTree = "<group>"; };
+		7F00AEDD200CE6CC0082CD08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		7F00AEDF200CE6DB0082CD08 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		7F00AEE2200CEA960082CD08 /* Orbitron-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Orbitron-Bold.ttf"; path = "Shigui/Orbitron/Orbitron-Bold.ttf"; sourceTree = "<group>"; };
+		7F34B0EA20187A3600F5ABC4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		7F34B0EB20187A8B00F5ABC4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7F34B0ED20187B3C00F5ABC4 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		7F34B0EF2018884F00F5ABC4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7F62E45E20060492005E5DBC /* Shigui.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shigui.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F62E46120060492005E5DBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7F62E46320060492005E5DBC /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		7F62E46520060492005E5DBC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7F62E46820060492005E5DBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F62E46A20060492005E5DBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F62E46D20060492005E5DBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F62E46F20060492005E5DBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F62E4752006051E005E5DBC /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		7F62E477200608BE005E5DBC /* myAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myAppTools.swift; sourceTree = "<group>"; };
+		7F62E48520062374005E5DBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7F62E4872006237D005E5DBC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7F62E48A20062E89005E5DBC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		7F62E48E200634D9005E5DBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7FCB6F362015FDAC00C87731 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		7FCB6F382015FDE400C87731 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		7FCB6F3A2015FE3000C87731 /* ValuationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuationsViewController.swift; sourceTree = "<group>"; };
+		7FCB6F3C2015FE5300C87731 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		7FCB6F3E201601B600C87731 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7FF3F3C72010CE2800E0FB11 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		7FFDBF9E200F6E76002FC041 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		97DCBBAA7F45BD09CB3419C7 /* Pods-Shigui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shigui.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shigui/Pods-Shigui.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E13667C5B4251C035746EF66 /* Pods_Shigui.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +80,11 @@
 		7F62E45520060492005E5DBC = {
 			isa = PBXGroup;
 			children = (
+				7F00AEE2200CEA960082CD08 /* Orbitron-Bold.ttf */,
 				7F62E46020060492005E5DBC /* Shigui */,
 				7F62E45F20060492005E5DBC /* Products */,
+				86D5E1574F3F98E18CD57758 /* Pods */,
+				B51D4CC0F8C5A3D8C90855D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +99,47 @@
 		7F62E46020060492005E5DBC /* Shigui */ = {
 			isa = PBXGroup;
 			children = (
+				7F34B0EA20187A3600F5ABC4 /* art.scnassets */,
+				7F00AEDA200CE21C0082CD08 /* Orbitron */,
 				7F62E46120060492005E5DBC /* AppDelegate.swift */,
-				7F62E46320060492005E5DBC /* art.scnassets */,
 				7F62E46520060492005E5DBC /* ViewController.swift */,
 				7F62E46720060492005E5DBC /* Main.storyboard */,
+				7F62E477200608BE005E5DBC /* myAppTools.swift */,
+				7F62E4752006051E005E5DBC /* RegisterViewController.swift */,
+				7FFDBF9E200F6E76002FC041 /* WelcomeViewController.swift */,
+				7F62E48A20062E89005E5DBC /* LoginViewController.swift */,
+				7FF3F3C72010CE2800E0FB11 /* ForgotPasswordViewController.swift */,
+				7F34B0ED20187B3C00F5ABC4 /* ChangePasswordViewController.swift */,
+				7FCB6F382015FDE400C87731 /* ShopViewController.swift */,
+				7FCB6F362015FDAC00C87731 /* ProfileViewController.swift */,
+				7FCB6F3A2015FE3000C87731 /* ValuationsViewController.swift */,
+				7FCB6F3C2015FE5300C87731 /* FavouritesViewController.swift */,
+				7FCB6F3E201601B600C87731 /* SettingsViewController.swift */,
+				7F34B0EB20187A8B00F5ABC4 /* HomeViewController.swift */,
+				7F34B0EF2018884F00F5ABC4 /* MapViewController.swift */,
 				7F62E46A20060492005E5DBC /* Assets.xcassets */,
 				7F62E46C20060492005E5DBC /* LaunchScreen.storyboard */,
+				7F62E48620062374005E5DBC /* Localizable.strings */,
 				7F62E46F20060492005E5DBC /* Info.plist */,
 			);
 			path = Shigui;
+			sourceTree = "<group>";
+		};
+		86D5E1574F3F98E18CD57758 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62799F93077A8468466953E8 /* Pods-Shigui.debug.xcconfig */,
+				97DCBBAA7F45BD09CB3419C7 /* Pods-Shigui.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B51D4CC0F8C5A3D8C90855D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03C6DD9E956EAA66DDDAA7A0 /* Pods_Shigui.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +149,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F62E47220060492005E5DBC /* Build configuration list for PBXNativeTarget "Shigui" */;
 			buildPhases = (
+				0EC6462F522B67D550B1CFE5 /* [CP] Check Pods Manifest.lock */,
 				7F62E45A20060492005E5DBC /* Sources */,
 				7F62E45B20060492005E5DBC /* Frameworks */,
 				7F62E45C20060492005E5DBC /* Resources */,
+				8BE08C1FAA063D54D2CF8FB9 /* [CP] Embed Pods Frameworks */,
+				CA64325A218E4554ED3DDB43 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -110,6 +188,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 7F62E45520060492005E5DBC;
 			productRefGroup = 7F62E45F20060492005E5DBC /* Products */;
@@ -126,22 +205,101 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F62E46420060492005E5DBC /* art.scnassets in Resources */,
+				7F00AEE3200CEA960082CD08 /* Orbitron-Bold.ttf in Resources */,
+				7F00AEE0200CE8620082CD08 /* Localizable.strings in Resources */,
 				7F62E46E20060492005E5DBC /* LaunchScreen.storyboard in Resources */,
 				7F62E46B20060492005E5DBC /* Assets.xcassets in Resources */,
 				7F62E46920060492005E5DBC /* Main.storyboard in Resources */,
+				7F00AEE1200CEA430082CD08 /* Orbitron in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EC6462F522B67D550B1CFE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shigui-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BE08C1FAA063D54D2CF8FB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shigui/Pods-Shigui-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/CDAlertView/CDAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shigui/Pods-Shigui-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA64325A218E4554ED3DDB43 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shigui/Pods-Shigui-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7F62E45A20060492005E5DBC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F62E48B20062E89005E5DBC /* LoginViewController.swift in Sources */,
+				7FF3F3C82010CE2800E0FB11 /* ForgotPasswordViewController.swift in Sources */,
+				7FCB6F3B2015FE3000C87731 /* ValuationsViewController.swift in Sources */,
+				7FCB6F3D2015FE5300C87731 /* FavouritesViewController.swift in Sources */,
+				7FCB6F392015FDE400C87731 /* ShopViewController.swift in Sources */,
+				7F62E4762006051E005E5DBC /* RegisterViewController.swift in Sources */,
 				7F62E46620060492005E5DBC /* ViewController.swift in Sources */,
+				7FFDBF9F200F6E76002FC041 /* WelcomeViewController.swift in Sources */,
 				7F62E46220060492005E5DBC /* AppDelegate.swift in Sources */,
+				7FCB6F372015FDAC00C87731 /* ProfileViewController.swift in Sources */,
+				7F62E478200608BE005E5DBC /* myAppTools.swift in Sources */,
+				7F34B0EC20187A8B00F5ABC4 /* HomeViewController.swift in Sources */,
+				7FCB6F3F201601B600C87731 /* SettingsViewController.swift in Sources */,
+				7F34B0F02018884F00F5ABC4 /* MapViewController.swift in Sources */,
+				7F34B0EE20187B3C00F5ABC4 /* ChangePasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +310,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				7F62E46820060492005E5DBC /* Base */,
+				7F00AEDD200CE6CC0082CD08 /* en */,
+				7F00AEDF200CE6DB0082CD08 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -162,6 +322,16 @@
 				7F62E46D20060492005E5DBC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7F62E48620062374005E5DBC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F62E48520062374005E5DBC /* en */,
+				7F62E4872006237D005E5DBC /* es */,
+				7F62E48E200634D9005E5DBC /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -276,6 +446,7 @@
 		};
 		7F62E47320060492005E5DBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62799F93077A8468466953E8 /* Pods-Shigui.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -290,6 +461,7 @@
 		};
 		7F62E47420060492005E5DBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97DCBBAA7F45BD09CB3419C7 /* Pods-Shigui.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

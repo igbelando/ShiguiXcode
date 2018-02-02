@@ -1,0 +1,87 @@
+//
+//  Localizable.strings
+//  Shigui
+//
+//  Created by alumnos on 10/1/18.
+//  Copyright © 2018 cev. All rights reserved.
+//
+"en"="English";
+"es"="Español";
+
+
+
+"helloWorld"="HOLA MUNDO!";
+"username"="Usuario";
+"password"="Contraseña";
+"login"="Login";
+
+"register"="Regístrate";
+"insertUser"="Inserta tu nombre";
+"insertPassword"="Inserta tu contraseña";
+"rememberPassword"="¿Olvidaste tu contraseña?";
+"guest"="Modo invitado";
+
+// REGISTER
+"registerTitle"="Registro";
+"back"="Volver";
+"repeatPassword"="Repite tu contraseña";
+"insertEmail"="Inserta tu email";
+
+"cancel"="Cancelar";
+"done"="Hecho";
+"ok"="OK";
+"changePassword"="Cambiar contraseña";
+
+//HOME
+
+
+"SHIGUI" ="SHIGUI";
+"SETTINGS"="AJUSTES";
+"PROFILE"="PERFIL";
+"FAVOURITES"="FAVORITOS";
+"VALUATIONS"="VALORACIONES";
+"SHOP"="TIENDA";
+// WELCOME
+"GO!"="VAMOS!";
+//PROFILE
+"HOME"="INICIO";
+"PROFILE"="PERFIL";
+"SAVE"="GUARDAR";
+"CHANGE PASSWORD"="CAMBIAR CONTRASEÑA";
+
+//FORGOT PASSWORD
+"email"="Confirma tu Email";
+"password"="Introduce una nueva contraseña";
+
+//CHANGE PASSWORD
+"passLBL"="Introduce tu nueva contraseña";
+"changeBTN"="GUARDAR CAMBIOS";
+"back"="ATRAS";
+
+//ALERTS
+"caution"="Cuidado";
+"empty"="Completa los campos vacios";
+"email fail"="El formato del Email no es valido";
+"pass fail"="Las contraseñas no coinciden";
+"pass short"="La contraseña tiene una longitud mínima de 6 caracteres";
+"pass long"="La contraseña no puede superar los 12 caracteres";
+"success"="Registro completado";
+"not available"="Aun no disponible";
+"successLogin"="Login completado";
+"cautionForgot"="Introduce tu email";
+"successEmail"="Email correcto";
+"successChanges"="Cambios guardados";
+"failChanges"="Cambios no guardados";
+"successPassword"="Contraseña cambiada";
+"failServer"="Error de servidor";
+"Code" = "Codigo";
+"emailNotExist" = "El email no existe";
+"verifiedEmail" = "Email verificado";
+"userExist" = "El usuario o email ya existe";
+"emptyUser" = "Nombre de usuario vacío";
+"userExists" = "El nombre de usuario ya existe";
+"savedImage" = "Foto guardada correctamente";
+"failLogin" = "El usuario o la contraseña no coinciden";
+
+
+

@@ -1,0 +1,6 @@
+framework module Pods_Shigui {
+  umbrella header "Pods-Shigui-umbrella.h"
+
+  export *
+  module * { export * }
+}

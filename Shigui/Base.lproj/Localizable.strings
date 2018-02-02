@@ -1,0 +1,86 @@
+//
+//  Localizable.strings
+//  Shigui
+//
+//  Created by alumnos on 10/1/18.
+//  Copyright © 2018 cev. All rights reserved.
+//
+"en"="English";
+"es"="Español";
+
+
+
+"helloWorld"="HELLO WORLD!";
+"username"="Username";
+"password"="Password";
+"login"="Login";
+
+"register"="Register now";
+"insertUser"="Insert your username";
+"insertPassword"="Insert your password";
+"rememberPassword"="Forgot your password?";
+"guest"="Guest mode";
+
+// REGISTER
+"registerTitle"="Register";
+"back"="Back";
+"repeatPassword"="Repeat your Password";
+"insertEmail"="Insert your email";
+
+"cancel"="Cancel";
+
+"done"="Done";
+"ok"="OK";
+"changePassword"="Change password";
+
+//HOME
+
+
+"SHIGUI" ="SHIGUI";
+"PROFILE"="PROFILE";
+"SETTINGS"="SETTINGS";
+"FAVOURITES"="FAVOURITES";
+"VALUATIONS"="VALUATIONS";
+"SHOP"="SHOP";
+// WELCOME
+"GO!"="GO!";
+
+//PROFILE
+"HOME"="HOME";
+"PROFILE"="PROFILE";
+"SAVE"="SAVE";
+"CHANGE PASSWORD"="CHANGE PASSWORD";
+//FORGOT PASSWORD
+"email"="Confirm your email";
+"password"="Enter new password";
+//CHANGE PASSWORD
+"passLBL"="Enter your new password";
+"changeBTN"="SAVE CHANGES";
+"back"="BACK";
+
+//ALERTS
+"caution"="Caution";
+"empty"="Complete the empty fields";
+"email fail"="The Email format is incorrect";
+"pass fail"="The passwords don't match";
+"pass short"="The password must be at least 6 characters long";
+"pass long"="The password cannot exceed 12 characters";
+"success"="Register completed";
+"not available"="Not available yet";
+"successLogin"="Login completed";
+"cautionForgot"="Enter your email";
+"successEmail"="Correct Email";
+"successChanges"="Saved changes";
+"failChanges"="Non saved changes";
+"successPassword"="Changed password";
+"failServer"="Server failed";
+"Code" = "Code";
+"emailNotExist" = "Email doesn't exist";
+"verifiedEmail" = "Verified Email";
+"userExist" = "User or email already exists";
+"emptyUser" = "Username empty";
+"userExists" = "Username already exists";
+"savedImage" = "Image saved";
+"failLogin" = "Name or password doesn't match";
+
+
