@@ -8,8 +8,6 @@
 "en"="English";
 "es"="Español";
 
-
-
 "helloWorld"="HELLO WORLD!";
 "username"="Username";
 "password"="Password";
@@ -20,6 +18,8 @@
 "insertPassword"="Insert your password";
 "rememberPassword"="Forgot your password?";
 "guest"="Guest mode";
+"valueThis"="VALUE THIS PLACE";
+"coment"="COMMENTS";
 
 // REGISTER
 "registerTitle"="Register";
@@ -34,8 +34,6 @@
 "changePassword"="Change password";
 
 //HOME
-
-
 "SHIGUI"="SHIGUI";
 "PROFILE"="PROFILE";
 "SETTINGS"="SETTINGS";
@@ -45,11 +43,15 @@
 
 // WELCOME
 "GO!"="GO!";
+"choosePhoto"="Choose a profile image";
+"welcome"="Welcome to shigui";
+
 //PROFILE
 "HOME"="HOME";
 "PROFILE"="PROFILE";
 "SAVE"="SAVE";
-"CHANGE PASSWORD"="CHANGE PASSWORD";
+"CHANGE PASSWORD"="Change password";
+"logout"="Log Out";
 
 //FORGOT PASSWORD
 "email"="Confirm your email";
@@ -85,6 +87,20 @@
 "userExists" = "Username already exists";
 "savedImage" = "Image saved";
 "failLogin" = "Name or password doesn't match";
+"library" = "Choose how to change the photo";
+"valueZero" = "You must put a value to comment";
+"comentLong" = "Comment can't exceed 180 characters";
+"valueCorrect" = "Valuation created";
+"favoriteCreate" = "Place added to favs";
+"favoriteDelete" = "Place deleted to favs";
+"valuationDelete" = "Valation deleted";
+
+ //TABLES
+"name" = "Name";
+"comentary" = "Comment";
+"comen" = "Comment";
+"shigui" = "Say to Shigui the place";
+
 
 
 

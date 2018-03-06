@@ -8,8 +8,6 @@
 "en"="English";
 "es"="Español";
 
-
-
 "helloWorld"="HOLA MUNDO!";
 "username"="Usuario";
 "password"="Contraseña";
@@ -20,6 +18,8 @@
 "insertPassword"="Inserta tu contraseña";
 "rememberPassword"="¿Olvidaste tu contraseña?";
 "guest"="Modo invitado";
+"valueThis"="VALORA EL LUGAR";
+"coment"="COMENTARIOS";
 
 // REGISTER
 "registerTitle"="Registro";
@@ -33,21 +33,24 @@
 "changePassword"="Cambiar contraseña";
 
 //HOME
-
-
 "SHIGUI" ="SHIGUI";
 "SETTINGS"="AJUSTES";
 "PROFILE"="PERFIL";
 "FAVOURITES"="FAVORITOS";
 "VALUATIONS"="VALORACIONES";
 "SHOP"="TIENDA";
+
 // WELCOME
 "GO!"="VAMOS!";
+"choosePhoto"="Elige una foto de perfil";
+"welcome"="Bienvenid@ a shigui";
+
 //PROFILE
 "HOME"="INICIO";
 "PROFILE"="PERFIL";
 "SAVE"="GUARDAR";
-"CHANGE PASSWORD"="CAMBIAR CONTRASEÑA";
+"CHANGE PASSWORD"="Cambiar contraseña";
+"logout"="Cerrar sesión";
 
 //FORGOT PASSWORD
 "email"="Confirma tu Email";
@@ -82,6 +85,19 @@
 "userExists" = "El nombre de usuario ya existe";
 "savedImage" = "Foto guardada correctamente";
 "failLogin" = "El usuario o la contraseña no coinciden";
+"library" = "Elige el método de cambio de foto";
+"valueZero" = "Debes meter un valor para valorar";
+"comentLong" = "El comentario no puede exceder de 180 caracteres";
+"valueCorrect" = "Valoración creada";
+"favoriteCreate" = "Lugar añadido a favoritos";
+"favoriteDelete" = "Lugar borrado de favoritos";
+"valuationDelete" = "Valoración borrada";
+//TABLES
+"name" = "Nombre";
+"comentary" = "Comentario";
+"comen" = "Comenta";
+"shigui" = "Dile a Shigui dónde ir";
+
 
 
 

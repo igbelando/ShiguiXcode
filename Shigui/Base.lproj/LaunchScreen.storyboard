@@ -18,18 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="Jg8-Iy-HR8">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-1024" translatesAutoresizingMaskIntoConstraints="NO" id="VXC-s5-FlG">
+                                <rect key="frame" x="105" y="251" width="165" height="165"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="667" id="IGs-IN-IBV"/>
-                                    <constraint firstAttribute="width" constant="375" id="POa-eE-CNv"/>
+                                    <constraint firstAttribute="width" constant="165" id="NJ2-mP-u0b"/>
+                                    <constraint firstAttribute="height" constant="165" id="QQ2-7Z-qqs"/>
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11229632049798965" green="0.15226161479949951" blue="0.19387593865394592" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Jg8-Iy-HR8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Juh-yw-8zH"/>
-                            <constraint firstItem="Jg8-Iy-HR8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="udW-go-BRi"/>
+                            <constraint firstItem="VXC-s5-FlG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7IM-Df-fe9"/>
+                            <constraint firstItem="VXC-s5-FlG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="taG-h2-kjj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash" width="375" height="667"/>
+        <image name="Icon-1024" width="1024" height="1024"/>
     </resources>
 </document>

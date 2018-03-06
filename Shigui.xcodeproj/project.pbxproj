@@ -10,6 +10,11 @@
 		7F00AEE0200CE8620082CD08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F62E48620062374005E5DBC /* Localizable.strings */; };
 		7F00AEE1200CEA430082CD08 /* Orbitron in Resources */ = {isa = PBXBuildFile; fileRef = 7F00AEDA200CE21C0082CD08 /* Orbitron */; };
 		7F00AEE3200CEA960082CD08 /* Orbitron-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F00AEE2200CEA960082CD08 /* Orbitron-Bold.ttf */; };
+		7F055414203EE3E300A4DE8F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F055413203EE3E300A4DE8F /* DetailViewController.swift */; };
+		7F12176120346BB500096884 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F12176020346BB500096884 /* NavigationViewController.swift */; };
+		7F1EC3D3204442BC00902FC0 /* DeleteMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC3D2204442BC00902FC0 /* DeleteMeViewController.swift */; };
+		7F1EC3D52044477B00902FC0 /* PlaceAnnotationNode:.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1EC3D42044477B00902FC0 /* PlaceAnnotationNode:.swift */; };
+		7F23A76020457D6600331FFC /* TempTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F23A75F20457D6600331FFC /* TempTableViewCell.swift */; };
 		7F34B0EC20187A8B00F5ABC4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34B0EB20187A8B00F5ABC4 /* HomeViewController.swift */; };
 		7F34B0EE20187B3C00F5ABC4 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34B0ED20187B3C00F5ABC4 /* ChangePasswordViewController.swift */; };
 		7F34B0F02018884F00F5ABC4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F34B0EF2018884F00F5ABC4 /* MapViewController.swift */; };
@@ -21,11 +26,15 @@
 		7F62E4762006051E005E5DBC /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62E4752006051E005E5DBC /* RegisterViewController.swift */; };
 		7F62E478200608BE005E5DBC /* myAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62E477200608BE005E5DBC /* myAppTools.swift */; };
 		7F62E48B20062E89005E5DBC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F62E48A20062E89005E5DBC /* LoginViewController.swift */; };
+		7F90DED2203ACA2000DAF11C /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F90DED1203ACA2000DAF11C /* Artwork.swift */; };
+		7FA8BC77204941B500C13612 /* MapTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8BC76204941B500C13612 /* MapTableViewCell.swift */; };
+		7FA8BC79204941C500C13612 /* FavouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA8BC78204941C500C13612 /* FavouriteTableViewCell.swift */; };
+		7FCAA4C12031A8430090ABC8 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCAA4C02031A8430090ABC8 /* SearchTableViewCell.swift */; };
 		7FCB6F372015FDAC00C87731 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB6F362015FDAC00C87731 /* ProfileViewController.swift */; };
 		7FCB6F392015FDE400C87731 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB6F382015FDE400C87731 /* ShopViewController.swift */; };
-		7FCB6F3B2015FE3000C87731 /* ValuationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB6F3A2015FE3000C87731 /* ValuationsViewController.swift */; };
 		7FCB6F3D2015FE5300C87731 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB6F3C2015FE5300C87731 /* FavouritesViewController.swift */; };
 		7FCB6F3F201601B600C87731 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCB6F3E201601B600C87731 /* SettingsViewController.swift */; };
+		7FEABB912047EF1D000D45EC /* myTempTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEABB902047EF1D000D45EC /* myTempTableViewCell.swift */; };
 		7FF3F3C82010CE2800E0FB11 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF3F3C72010CE2800E0FB11 /* ForgotPasswordViewController.swift */; };
 		7FFDBF9F200F6E76002FC041 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FFDBF9E200F6E76002FC041 /* WelcomeViewController.swift */; };
 		E13667C5B4251C035746EF66 /* Pods_Shigui.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03C6DD9E956EAA66DDDAA7A0 /* Pods_Shigui.framework */; };
@@ -38,6 +47,11 @@
 		7F00AEDD200CE6CC0082CD08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		7F00AEDF200CE6DB0082CD08 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
 		7F00AEE2200CEA960082CD08 /* Orbitron-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Orbitron-Bold.ttf"; path = "Shigui/Orbitron/Orbitron-Bold.ttf"; sourceTree = "<group>"; };
+		7F055413203EE3E300A4DE8F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7F12176020346BB500096884 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
+		7F1EC3D2204442BC00902FC0 /* DeleteMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMeViewController.swift; sourceTree = "<group>"; };
+		7F1EC3D42044477B00902FC0 /* PlaceAnnotationNode:.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaceAnnotationNode:.swift"; sourceTree = "<group>"; };
+		7F23A75F20457D6600331FFC /* TempTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempTableViewCell.swift; sourceTree = "<group>"; };
 		7F34B0EA20187A3600F5ABC4 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		7F34B0EB20187A8B00F5ABC4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7F34B0ED20187B3C00F5ABC4 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
@@ -55,11 +69,15 @@
 		7F62E4872006237D005E5DBC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7F62E48A20062E89005E5DBC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		7F62E48E200634D9005E5DBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7F90DED1203ACA2000DAF11C /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		7FA8BC76204941B500C13612 /* MapTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTableViewCell.swift; sourceTree = "<group>"; };
+		7FA8BC78204941C500C13612 /* FavouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteTableViewCell.swift; sourceTree = "<group>"; };
+		7FCAA4C02031A8430090ABC8 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		7FCB6F362015FDAC00C87731 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7FCB6F382015FDE400C87731 /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
-		7FCB6F3A2015FE3000C87731 /* ValuationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValuationsViewController.swift; sourceTree = "<group>"; };
 		7FCB6F3C2015FE5300C87731 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		7FCB6F3E201601B600C87731 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7FEABB902047EF1D000D45EC /* myTempTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTempTableViewCell.swift; sourceTree = "<group>"; };
 		7FF3F3C72010CE2800E0FB11 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		7FFDBF9E200F6E76002FC041 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		97DCBBAA7F45BD09CB3419C7 /* Pods-Shigui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shigui.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shigui/Pods-Shigui.release.xcconfig"; sourceTree = "<group>"; };
@@ -102,27 +120,52 @@
 				7F34B0EA20187A3600F5ABC4 /* art.scnassets */,
 				7F00AEDA200CE21C0082CD08 /* Orbitron */,
 				7F62E46120060492005E5DBC /* AppDelegate.swift */,
-				7F62E46520060492005E5DBC /* ViewController.swift */,
 				7F62E46720060492005E5DBC /* Main.storyboard */,
 				7F62E477200608BE005E5DBC /* myAppTools.swift */,
-				7F62E4752006051E005E5DBC /* RegisterViewController.swift */,
-				7FFDBF9E200F6E76002FC041 /* WelcomeViewController.swift */,
-				7F62E48A20062E89005E5DBC /* LoginViewController.swift */,
-				7FF3F3C72010CE2800E0FB11 /* ForgotPasswordViewController.swift */,
-				7F34B0ED20187B3C00F5ABC4 /* ChangePasswordViewController.swift */,
-				7FCB6F382015FDE400C87731 /* ShopViewController.swift */,
-				7FCB6F362015FDAC00C87731 /* ProfileViewController.swift */,
-				7FCB6F3A2015FE3000C87731 /* ValuationsViewController.swift */,
-				7FCB6F3C2015FE5300C87731 /* FavouritesViewController.swift */,
-				7FCB6F3E201601B600C87731 /* SettingsViewController.swift */,
-				7F34B0EB20187A8B00F5ABC4 /* HomeViewController.swift */,
-				7F34B0EF2018884F00F5ABC4 /* MapViewController.swift */,
+				7F90DED1203ACA2000DAF11C /* Artwork.swift */,
+				7FA8BC752049418800C13612 /* cells */,
+				7F1EC3D42044477B00902FC0 /* PlaceAnnotationNode:.swift */,
+				7F12176020346BB500096884 /* NavigationViewController.swift */,
+				7F90DED5203AFDFD00DAF11C /* Views */,
 				7F62E46A20060492005E5DBC /* Assets.xcassets */,
 				7F62E46C20060492005E5DBC /* LaunchScreen.storyboard */,
 				7F62E48620062374005E5DBC /* Localizable.strings */,
 				7F62E46F20060492005E5DBC /* Info.plist */,
 			);
 			path = Shigui;
+			sourceTree = "<group>";
+		};
+		7F90DED5203AFDFD00DAF11C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7FCB6F362015FDAC00C87731 /* ProfileViewController.swift */,
+				7FCB6F382015FDE400C87731 /* ShopViewController.swift */,
+				7FFDBF9E200F6E76002FC041 /* WelcomeViewController.swift */,
+				7F62E4752006051E005E5DBC /* RegisterViewController.swift */,
+				7F62E46520060492005E5DBC /* ViewController.swift */,
+				7F62E48A20062E89005E5DBC /* LoginViewController.swift */,
+				7FF3F3C72010CE2800E0FB11 /* ForgotPasswordViewController.swift */,
+				7F34B0ED20187B3C00F5ABC4 /* ChangePasswordViewController.swift */,
+				7F055413203EE3E300A4DE8F /* DetailViewController.swift */,
+				7F34B0EB20187A8B00F5ABC4 /* HomeViewController.swift */,
+				7F34B0EF2018884F00F5ABC4 /* MapViewController.swift */,
+				7F1EC3D2204442BC00902FC0 /* DeleteMeViewController.swift */,
+				7FCB6F3E201601B600C87731 /* SettingsViewController.swift */,
+				7FCB6F3C2015FE5300C87731 /* FavouritesViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7FA8BC752049418800C13612 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				7FCAA4C02031A8430090ABC8 /* SearchTableViewCell.swift */,
+				7F23A75F20457D6600331FFC /* TempTableViewCell.swift */,
+				7FA8BC78204941C500C13612 /* FavouriteTableViewCell.swift */,
+				7FA8BC76204941B500C13612 /* MapTableViewCell.swift */,
+				7FEABB902047EF1D000D45EC /* myTempTableViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		86D5E1574F3F98E18CD57758 /* Pods */ = {
@@ -242,6 +285,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Shigui/Pods-Shigui-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARCL/ARCL.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/CDAlertView/CDAlertView.framework",
@@ -251,6 +295,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARCL.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CDAlertView.framework",
@@ -286,20 +331,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F62E48B20062E89005E5DBC /* LoginViewController.swift in Sources */,
+				7F1EC3D52044477B00902FC0 /* PlaceAnnotationNode:.swift in Sources */,
 				7FF3F3C82010CE2800E0FB11 /* ForgotPasswordViewController.swift in Sources */,
-				7FCB6F3B2015FE3000C87731 /* ValuationsViewController.swift in Sources */,
+				7F12176120346BB500096884 /* NavigationViewController.swift in Sources */,
 				7FCB6F3D2015FE5300C87731 /* FavouritesViewController.swift in Sources */,
+				7FA8BC77204941B500C13612 /* MapTableViewCell.swift in Sources */,
 				7FCB6F392015FDE400C87731 /* ShopViewController.swift in Sources */,
+				7FA8BC79204941C500C13612 /* FavouriteTableViewCell.swift in Sources */,
+				7F1EC3D3204442BC00902FC0 /* DeleteMeViewController.swift in Sources */,
+				7F23A76020457D6600331FFC /* TempTableViewCell.swift in Sources */,
 				7F62E4762006051E005E5DBC /* RegisterViewController.swift in Sources */,
 				7F62E46620060492005E5DBC /* ViewController.swift in Sources */,
 				7FFDBF9F200F6E76002FC041 /* WelcomeViewController.swift in Sources */,
 				7F62E46220060492005E5DBC /* AppDelegate.swift in Sources */,
+				7F055414203EE3E300A4DE8F /* DetailViewController.swift in Sources */,
 				7FCB6F372015FDAC00C87731 /* ProfileViewController.swift in Sources */,
 				7F62E478200608BE005E5DBC /* myAppTools.swift in Sources */,
 				7F34B0EC20187A8B00F5ABC4 /* HomeViewController.swift in Sources */,
 				7FCB6F3F201601B600C87731 /* SettingsViewController.swift in Sources */,
+				7FCAA4C12031A8430090ABC8 /* SearchTableViewCell.swift in Sources */,
 				7F34B0F02018884F00F5ABC4 /* MapViewController.swift in Sources */,
+				7F90DED2203ACA2000DAF11C /* Artwork.swift in Sources */,
 				7F34B0EE20187B3C00F5ABC4 /* ChangePasswordViewController.swift in Sources */,
+				7FEABB912047EF1D000D45EC /* myTempTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,11 +503,15 @@
 			baseConfigurationReference = 62799F93077A8468466953E8 /* Pods-Shigui.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7ERVUZL2M;
 				INFOPLIST_FILE = Shigui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = javior.Shigui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -464,11 +522,14 @@
 			baseConfigurationReference = 97DCBBAA7F45BD09CB3419C7 /* Pods-Shigui.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D7ERVUZL2M;
 				INFOPLIST_FILE = Shigui/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = javior.Shigui;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

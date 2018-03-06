@@ -10,5 +10,6 @@ target 'Shigui' do
   pod 'TextFieldEffects', '~> 1.4'
   pod 'CDAlertView', '~> 0.7'
   pod 'AlamofireImage', '~> 3.3'
+  pod 'ARCL', '~> 1.0'
 
 end
