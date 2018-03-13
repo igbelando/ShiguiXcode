@@ -84,6 +84,7 @@ class ForgotPasswordViewController: UIViewController {
     }
     
     @IBAction func validateEmail(_ sender: Any) {
+         view.endEditing(true)
         
         if (rememberEmailTxf.text! == "") {
             

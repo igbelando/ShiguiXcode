@@ -5,8 +5,7 @@
 //  Created by alumnos on 10/1/18.
 //  Copyright © 2018 cev. All rights reserved.
 //
-"en"="English";
-"es"="Español";
+
 
 "helloWorld"="HOLA MUNDO!";
 "username"="Usuario";
@@ -20,6 +19,8 @@
 "guest"="Modo invitado";
 "valueThis"="VALORA EL LUGAR";
 "coment"="COMENTARIOS";
+"en"="English";
+"es"="Español";
 
 // REGISTER
 "registerTitle"="Registro";
@@ -97,6 +98,9 @@
 "comentary" = "Comentario";
 "comen" = "Comenta";
 "shigui" = "Dile a Shigui dónde ir";
+"coment" = "Comentario";
+"language" = "Idioma";
+"languageModified" = "Idioma modificado";
 
 
 

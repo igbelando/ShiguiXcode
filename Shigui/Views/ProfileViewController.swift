@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 import Localize_Swift
 import CDAlertView
+import NVActivityIndicatorView
 
 extension UIView {
     
@@ -48,6 +49,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var logOutButton: UIButton!
    
+    @IBOutlet weak var myActivity: NVActivityIndicatorView!
     @IBOutlet weak var editPhotoBTN: UIButton!
     @IBOutlet weak var homeBTN: UIButton!
     @IBOutlet weak var changePasswordBTN: UIButton!
@@ -64,11 +66,13 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     var datasFavorite: Array<Any> = []
     var imagePath = ""
     var dataReceivedProfile: String?
+    var firstcharge = true
     
      let shighuiColor = UIColor(red: 56/255, green: 151/255, blue: 217/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myActivity.startAnimating()
         
         getUser()
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.dismissKeyboard))
@@ -128,7 +132,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 let myCode = json["code"] as! Int
                 switch myCode {
                 case 200:
-                    print("")
+                  
                     let alertDifferentPassTwo = CDAlertView(title: "valuationDelete".localized(), message: "", type: .success)
                     let doneAction = CDAlertViewAction(title: "ok".localized())
                     alertDifferentPassTwo.isHeaderIconFilled = true
@@ -175,7 +179,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         logOutButton.layer.borderColor = shighuiColor.cgColor
         saveChangesBTN.isEnabled = false
         saveChangesBTN.backgroundColor = UIColor(red: 161/255, green: 157/255, blue: 150/255, alpha: 0.7)
+        if (firstcharge){
         existsImageTools(image: datas["picture"] as! String, view: profileIMG)
+            firstcharge = false
+        }
 
         logOutButton.setTitle("logout".localized(), for: .normal)
         emailTXF.backgroundColor = UIColor(red: 56/255, green: 151/255, blue: 217/255, alpha: 0)
@@ -212,6 +219,11 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
     
     @IBAction func saveChanges(_ sender: Any) {
+        view.endEditing(true)
+        if (!myActivity.isAnimating){
+            myActivity.startAnimating()
+        }
+
         
         if(nameTXF.text! != "" || emailTXF.text! != "" ){
             
@@ -244,7 +256,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                             self.emailTXF.backgroundColor = UIColor(red: 56/255, green: 151/255, blue: 217/255, alpha: 0)
                             self.emailTXF.textColor = UIColor.white
                             self.emailTXF.isEnabled = false
-                            self.updatePicture()
+                        
+                        
                         
                         
                         
@@ -280,6 +293,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             alertUserExist .add(action: veryverydoneAction)
             alertUserExist.show()
         }
+        
+        self.updatePicture()
         
         
         
@@ -340,6 +355,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         // Dispose of any resources that can be recreated.
     }
     func updatePicture(){
+       
+
         
         let urlphoto = URL(string:"http://h2744356.stratoserver.net/shigui/Shigui/public/index.php/users/uploadImage.json")
         let parametersphoto: Parameters = [
@@ -372,7 +389,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                     print("--ENCODINGRESULT---------------------------->")
                     print(encodingResult)
                     print("------------------------------>")
+                    self.imagePath = datas["picture"] as! String
+                    
                     existsImageTools(image: datas["picture"] as! String, view: self.profileIMG)
+                   
                     
                     
                     //                        print("La peticion ha ido bien")
@@ -385,6 +405,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 }
         }
         )
+       
+        self.getUserTwo()
         let alert = CDAlertView(title: "successChanges".localized(), message: "", type: .success)
         let doneAction = CDAlertViewAction(title: "ok".localized())
         
@@ -455,6 +477,68 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
        
     }
+    func getUserTwo(){
+        
+        let url = URL(string:"http://h2744356.stratoserver.net/shigui/Shigui/public/index.php/users/user.json")
+        var token = ""
+        if getDataInUserDefaults(key: "token")  != nil {
+            print("token :: \(getDataInUserDefaults(key: "token"))")
+            token = getDataInUserDefaults(key: "token")!
+        }
+        
+        let headers: HTTPHeaders = [
+            "Authorization": token,
+            "Content-Type": "multipart/form-data"
+        ]
+        
+        //peticion = "RegisterRequest"
+        //func miLlamada(url, parameters, tipo, peticion)
+        
+        Alamofire.request(url!,method: .get, headers: headers).responseJSON{ response in
+            
+            switch response.result {
+            case .success:
+                
+                print("La peticion ha ido bien")
+                let json = response.result.value as! Dictionary<String, Any>
+                let myCode = json["code"] as! Int
+                switch myCode {
+                case 200:
+                    
+                    print(json["data"])
+                    datas = json["data"]  as! Dictionary<String, Any>
+                    if(self.myActivity.isAnimating){
+                        self.myActivity.stopAnimating()
+                    }
+                    self.updateText()
+                    
+                    // datas = json["data"] as! Array<Any>.Type
+                    //  print(datas)
+                    
+                    //self.dataReceived = json["name"] as! String
+                    // showAlert(json["message"])
+                    // Accion de login -> Guardar en defaults -> Controller
+                    // case 400:
+                //     print("Han habido error")
+                default:
+                    
+                    let alert = CDAlertView(title: "Code ".localized() + "\(myCode)", message: "failServer".localized(), type: .warning)
+                    let doneAction = CDAlertViewAction(title: "ok".localized())
+                    alert.isHeaderIconFilled = true
+                    alert.circleFillColor = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1)
+                    alert.add(action: doneAction)
+                    alert.show()
+                    print("default")
+                }
+                
+            case .failure:
+                
+                print("La peticion no ha funcionado")
+            }
+        }
+        
+    }
+    
     
     
     @IBAction  func camera(){
@@ -509,6 +593,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                         }
                         self.myTableView.reloadData()
                         self.myTableView.sizeToFit()
+                        if(self.myActivity.isAnimating){
+                            self.myActivity.stopAnimating()
+                    }
                     
                     
                     //    datasFavorite = json["data"]  as! Dictionary<String, Any>

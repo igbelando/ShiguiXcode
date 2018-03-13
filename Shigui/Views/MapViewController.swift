@@ -10,6 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 import Alamofire
+import NVActivityIndicatorView
 
 class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate{
 
@@ -22,7 +23,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
     var buscar = ""
     var dataReceived: Bool?
     var stringReceived: String?
+    @IBOutlet weak var myActivity: NVActivityIndicatorView!
     
+    @IBOutlet weak var lagActivity: UIActivityIndicatorView!
     
     @IBOutlet weak var SearchTextField: UITextField!
     
@@ -37,10 +40,21 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+       
+       
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         myMapView.delegate = self
         SearchTextField.keyboardAppearance = .dark
         SearchTextField.attributedPlaceholder = NSAttributedString(string: "shigui".localized(),
                                                                    attributes: [NSAttributedStringKey.foregroundColor: UIColor.gray])
+        /*NVActivityIndicatorView(frame: nil, type: .pacman, color: UIColor.purple, padding: CGRect.c)*/
+        //lagActivity.startAnimating()
+        
         let color = UIColor.white
         // Initialization code
         SearchTextField.cornerRadius = 9
@@ -49,13 +63,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
         SearchTextField.layer.borderColor = color.cgColor
         SearchTableView.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0)
         
-       
-       
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
         self.resizeTableView()
+        /*let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)*/
         determineCurrentLocation()
         if (dataReceived == true) {
             print("coordenad_X: \(coordinates_X)")
@@ -68,6 +78,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
             
             //annotation.coordinate = item.placemark.coordinate
             // annotation.title = item.name
+            
             
             let request = MKLocalSearchRequest()
             request.naturalLanguageQuery = "\(stringReceived!)"
@@ -110,6 +121,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
             
         }
     }
+    @objc func dismissKeyboard() {
+        //Las vistas y toda la jerarquía renuncia a responder, para esconder el teclado
+        view.endEditing(true)
+    }
+    
     func favoritesSearh(){
         let item = matchingItems[0]
         print("-aaaaa---------------------------------->")
@@ -136,7 +152,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
     
     
     @IBAction func drawRoutes() {
-        
+        myActivity.startAnimating()
+
        // myMapView.showsUserLocation = true
         //locationManager.desiredAccuracy = kCLLocationAccuracyBest
         //locationManager.delegate = self
@@ -156,13 +173,19 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
         directions.calculate(completionHandler: {(response, error) in
             if error != nil {
                 print("Error getting directions: \(String(describing: error))")
+                if self.myActivity.isAnimating{
+                    self.myActivity.stopAnimating()
+                }
+
             } else {
-                print("response: \(String(describing: response))")
+                print("response: \(String(describing: response!))")
                 self.showRoutes(response: response!)
+                distanceBetweenLocations = (response?.routes[0].distance)!
+               
                 
             }
  
-            //distanceBetweenLocations = (response?.routes[0].distance)!
+            
             
         })
      
@@ -256,6 +279,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
                     switch myCode {
                     case 200:
                         datasPlace = json["data"]  as! Dictionary<String, Any>
+                        
+                       
                         //self.id = json["id"] as! Int
                         //print("\(json["data"] as! String)")
                         
@@ -305,6 +330,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
                     
                 }*/
             }
+            if myActivity.isAnimating{
+                myActivity.stopAnimating()
+            }
         }
     
     
@@ -319,9 +347,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
         return renderer
     }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        userLocation = locations[0]
-        let region = MKCoordinateRegionMakeWithDistance(userLocation!.coordinate, 2000, 2000)
-        myMapView.setRegion(region, animated: true)
+        
+        
+        let location = locations.first!
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 500, 500)
+        myMapView.setRegion(coordinateRegion, animated: true)
+        locationManager?.stopUpdatingLocation()
+        locationManager = nil
+        
+        
+//        userLocation = locations[0]
+//        let region = MKCoordinateRegionMakeWithDistance(userLocation!.coordinate, 2000, 2000)
+//        myMapView.setRegion(region, animated: true)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -357,6 +394,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
+        
+        
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
@@ -432,7 +471,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print(matchingItems.count)
-        return matchingItems.count
+        if(matchingItems.count > 6){
+            return 6
+        }
+        else{
+            return matchingItems.count
+        }
+        
+        
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -456,12 +503,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
         print(item)
          print("<aaaaaa----------------------------------")
         let annotation =  MapElement(title: item.name!, locationName: "", discipline: "", coordinate: CLLocationCoordinate2D(latitude: item.placemark.coordinate.latitude, longitude: item.placemark.coordinate.longitude))
+       // coordinates_X = item.placemark.coordinate.latitude
+       // coordinates_Y = item.placemark.coordinate.longitude
         
         //annotation.coordinate = item.placemark.coordinate
        // annotation.title = item.name
         
         
         self.myMapView.addAnnotation(annotation)
+        view.endEditing(true)
+
         
         matchingItems.removeAll()
         self.resizeTableView()

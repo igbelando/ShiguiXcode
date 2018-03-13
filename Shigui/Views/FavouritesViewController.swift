@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import CDAlertView
+import NVActivityIndicatorView
 
 class FavouritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -17,10 +18,17 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
     var datasFavorite: Array<Any> = []
     var datasPla: Array<Any> = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBOutlet weak var myActivity: NVActivityIndicatorView!
+    override func viewWillAppear(_ animated: Bool) {
+        
         getFavorites()
         NotificationCenter.default.addObserver(self, selector: #selector(self.deleteComment(_:)), name: Notification.Name("NotificationDeleteFavorite"), object: nil)
+        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+       
        
         // Do any additional setup after loading the view.
     }
@@ -204,6 +212,7 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
         }
     
     func getFavorites(){
+        myActivity.startAnimating()
         
         let url = URL(string:"http://h2744356.stratoserver.net/shigui/Shigui/public/index.php/favorites/favorites.json?")
         let headers: HTTPHeaders = [
@@ -224,6 +233,9 @@ class FavouritesViewController: UIViewController, UITableViewDataSource, UITable
                     print("myCode  ---- \(myCode)")
                     switch myCode {
                         case 200:
+                            if (self.myActivity.isAnimating){
+                                self.myActivity.stopAnimating()
+                            }
                             
                             //    datasFavorite = json["data"]  as! Dictionary<String, Any>
                             if(json["message"] as! String != "No hay favoritos que mostrar")

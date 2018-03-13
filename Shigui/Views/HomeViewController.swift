@@ -10,6 +10,7 @@ import UIKit
 import CDAlertView
 import Localize_Swift
 import Alamofire
+import NVActivityIndicatorView
 
 class HomeViewController: UIViewController {
     
@@ -21,6 +22,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var FavouriteBTN: UIButton!
     @IBOutlet weak var ShopBTN: UIButton!
     
+    @IBOutlet weak var activityView: NVActivityIndicatorView!
+    @IBOutlet weak var myActivity: UIActivityIndicatorView!
     
     var dataReceived: String?
     
@@ -42,6 +45,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         getUser()
+        //activityView.startAnimating()
     }
     
     func updateText(){
@@ -116,12 +120,9 @@ class HomeViewController: UIViewController {
                  /*let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
                 self.present(vc, animated: true, completion: nil)*/
                 
-                let alert = CDAlertView(title: "OOPS".localized(), message: "not available".localized(), type: .error)
-                let doneAction = CDAlertViewAction(title: "ok".localized())
-                alert.isHeaderIconFilled = true
-                alert.circleFillColor = UIColor(red: 231/255, green: 76/255, blue: 60/255, alpha: 1)
-                alert.add(action: doneAction)
-                alert.show()
+                
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+                self.present(vc, animated: true, completion: nil)
             default:
                 break
         }

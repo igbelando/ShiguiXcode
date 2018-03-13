@@ -5,8 +5,7 @@
 //  Created by alumnos on 10/1/18.
 //  Copyright © 2018 cev. All rights reserved.
 //
-"en"="English";
-"es"="Español";
+
 
 
 
@@ -20,7 +19,8 @@
 "insertPassword"="Insert your password";
 "rememberPassword"="Forgot your password?";
 "guest"="Guest mode";
-
+"en"="English";
+"es"="Español";
 // REGISTER
 "registerTitle"="Register";
 "back"="Back";
@@ -99,6 +99,9 @@
 "comentary" = "Comment";
 "comen" = "Comment";
 "shigui" = "Say to Shigui the place";
+"coment" = "Comment";
+"language" = "Language";
+"languageModified" = "Language modified";
 
 
 

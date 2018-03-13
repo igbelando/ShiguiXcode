@@ -9,6 +9,8 @@
 import UIKit
 import Alamofire
 import CDAlertView
+import CoreLocation
+import NVActivityIndicatorView
 
 class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -39,14 +41,27 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     var userImg = UIImageView.self
     var average = 0.0
     var datasAverage: Array<Any> = []
-
+    
+    @IBOutlet weak var myActivity: NVActivityIndicatorView!
+    
     
     @IBOutlet weak var commentTXV: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         getPlace()
-       
+        
+        
+        
+
+     
+        
+
+        // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        getPlace()
+        myActivity.startAnimating()
+        
         commentTXV.borderColor = UIColor.red
         commentTXV.borderWidth = 1
         getValuation()
@@ -62,15 +77,20 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         comentView.layer.borderWidth = 3
         comentView.clipsToBounds = true
         comentView.layer.borderColor = color.cgColor
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MapViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+           namelbl.text! = (datasPlace["name"] as! String?)!
+        coordinates_X = Double(datasPlace["coordinates_X"] as! String)!
+        coordinates_Y = Double(datasPlace["coordinates_Y"] as! String)!
+        
 
+       
         
         
 
-        namelbl.text! = (datasPlace["name"] as! String?)!
-        print("http://h2744356.stratoserver.net/shigui/Shigui/public/index.php/places/place.json?id=\((datasPlace ["id"] as! String))")
-
-        // Do any additional setup after loading the view.
+        
     }
+    
  
     @IBAction func comment(_ sender: Any) {
         comentView.isHidden = false
@@ -78,6 +98,10 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         back.isEnabled = false
         
         
+    }
+    @objc func dismissKeyboard() {
+        //Las vistas y toda la jerarquía renuncia a responder, para esconder el teclado
+        view.endEditing(true)
     }
     
   
@@ -89,6 +113,11 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
     }
     
+    @IBAction func goToAR(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DeleteMeViewController") as! DeleteMeViewController
+     
+        self.present(vc, animated: true, completion: nil)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -359,6 +388,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     @IBAction func send(_ sender: Any) {
+        view.endEditing(true)
+
         if(valuation == 0){
             let alertDifferentPassTwo = CDAlertView(title: "caution".localized(), message: "valueZero".localized(), type: .warning)
             let doneAction = CDAlertViewAction(title: "ok".localized())
@@ -367,7 +398,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
             alertDifferentPassTwo.add(action: doneAction)
             alertDifferentPassTwo.show()
         }
-        else if (commentTXV.text.count > 180){
+        else if (commentTXV.text.count > 150){
             let alertDifferentPassTwo = CDAlertView(title: "caution".localized(), message: "comentLong".localized(), type: .warning)
             let doneAction = CDAlertViewAction(title: "ok".localized())
             alertDifferentPassTwo.isHeaderIconFilled = true
@@ -418,6 +449,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                 print(json)
                 switch myCode {
                 case 200:
+                    self.myActivity.startAnimating()
                     
                     
                   
@@ -430,6 +462,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                     alertDifferentPassTwo.circleFillColor = UIColor(red: 56/255, green: 151/255, blue: 217/255, alpha: 1)
                     alertDifferentPassTwo.add(action: doneAction)
                     alertDifferentPassTwo.show()
+                    
                     
                     //self.id = json["id"] as! Int
                     //print("\(json["data"] as! String)")
@@ -552,9 +585,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                         
 
                         self.average = Double(holis as! Float)
-                        self.averageLBL.text! = "\(self.average)"
-                        print("jjjjjjjjjjjjjjjjdsodsgfjofjopdodfjogjopdojdgjofdgjpfgdojpdfopjdfgojgfojpfgdjpjofgopjdfgojpfgjopjhfghdfgghfdfs")
-                        print(self.average)
+                        self.averageLBL.text! = String(format: "%.2f", self.average)
                         
                         self.averageStars()
                   
@@ -793,6 +824,10 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                       }
                       self.favouriteTableView.reloadData()
                       self.favouriteTableView.sizeToFit()
+                      if self.myActivity.isAnimating{
+                        self.myActivity.stopAnimating()
+                      }
+                    
                   
                     
                         //    datasFavorite = json["data"]  as! Dictionary<String, Any>

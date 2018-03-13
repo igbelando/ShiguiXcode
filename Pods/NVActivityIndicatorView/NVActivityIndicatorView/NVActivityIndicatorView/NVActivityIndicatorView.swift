@@ -27,6 +27,7 @@
 
 import UIKit
 
+
 /**
  Enum of animation types used for activity indicator view.
 

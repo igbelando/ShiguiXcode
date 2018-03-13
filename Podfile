@@ -11,5 +11,7 @@ target 'Shigui' do
   pod 'CDAlertView', '~> 0.7'
   pod 'AlamofireImage', '~> 3.3'
   pod 'ARCL', '~> 1.0'
+  pod 'MapboxARKit'
+
 
 end
