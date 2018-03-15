@@ -75,6 +75,9 @@ class ForgotPasswordViewController: UIViewController {
         emailBtn.layer.borderColor = shighuiColor.cgColor
         passwordBtn.layer.borderWidth = 2
         passwordBtn.layer.borderColor = shighuiColor.cgColor
+        rememberEmailTxf.autocorrectionType = .no
+        passwordTxf.autocorrectionType = .no
+        repeatPasswordTxf.autocorrectionType = .no
 
     }
     

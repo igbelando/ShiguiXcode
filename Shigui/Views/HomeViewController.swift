@@ -45,6 +45,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         getUser()
+        activityView.startAnimating()
         //activityView.startAnimating()
     }
     
@@ -159,6 +160,9 @@ class HomeViewController: UIViewController {
 
                     datas = json["data"]  as! Dictionary<String, Any>
                     self.updateText()
+                    if(self.activityView.isAnimating){
+                        self.activityView.stopAnimating()
+                    }
                     
                 default:
                     

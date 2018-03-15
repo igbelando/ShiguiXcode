@@ -45,6 +45,8 @@ class LoginViewController: UIViewController {
         view.addGestureRecognizer(tap)
         usernameTxf.keyboardAppearance = .dark
         passwordTxf.keyboardAppearance = .dark
+        usernameTxf.autocorrectionType = .no
+        passwordTxf.autocorrectionType = .no
 
         // Do any additional setup after loading the view.
     }

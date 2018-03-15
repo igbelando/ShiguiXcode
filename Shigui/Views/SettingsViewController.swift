@@ -60,6 +60,7 @@ class SettingsViewController:UIViewController,UIPickerViewDelegate,UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
     return languages.count - 1
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -82,11 +83,38 @@ class SettingsViewController:UIViewController,UIPickerViewDelegate,UIPickerViewD
         saveDataInUserDefaults(value: languages[row + 1] , key: "language")
         
     }
-    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+   
+    /*func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let pickerLabel = UILabel()
+        let titleData = languages[row + 1]
         
         
-        return NSAttributedString(string: languages[row + 1], attributes: [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont(name: "Papyrus", size: 40.0)])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font:UIFont(name: "Georgia", size: 60.0)!])
+        pickerLabel.attributedText = myTitle
+        return pickerLabel
+    }*/
+ 
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        let pickerLabel = UILabel()
+        let titleData = languages[row + 1]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSAttributedStringKey.font:UIFont(name: "Orbitron-Bold", size: 26.0)!,NSAttributedStringKey.foregroundColor:UIColor.white])
+        pickerLabel.attributedText = myTitle
+        pickerLabel.textAlignment = .center
+        return pickerLabel
     }
+    /*func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        print("ENTRO PICKER")
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont(name: "Papyrus", size: 40)
+            
+            pickerLabel?.textAlignment = .center
+        }
+        
+        
+        return pickerLabel!
+    }*/
    /* func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
         
         var pickerLabel = view as? UILabel;
@@ -139,6 +167,7 @@ class SettingsViewController:UIViewController,UIPickerViewDelegate,UIPickerViewD
             super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         }
+        
     /*
     // MARK: - Navigation
 
@@ -151,3 +180,10 @@ class SettingsViewController:UIViewController,UIPickerViewDelegate,UIPickerViewD
 
     }
 }
+/*extension  UIPickerView {
+    func modifiedText(string: String) -> NSAttributedString{
+        
+        var att = NSAttributedString()
+        return att
+    }
+}*/

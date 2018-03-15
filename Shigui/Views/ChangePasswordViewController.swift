@@ -167,6 +167,8 @@ class ChangePasswordViewController: UIViewController {
         saveBTN.layer.borderColor = shighuiColor.cgColor
         repeatPasswordTxf.roundedTxf()
         passwordTxf.roundedTxf()
+        passwordTxf.autocorrectionType = .no
+        repeatPasswordTxf.autocorrectionType = .no
         
     }
     

@@ -8,15 +8,10 @@
 
 import UIKit
 
-class LanguagePicker: UIPickerView {
-
-    
-    override func draw(_ rect: CGRect) {
-        self.tintColor = UIColor.white
+extension  UIPickerView {
+    func modifiedText(string: String) -> NSAttributedString{
+        
+        var att = NSAttributedString()
+        return att
     }
-    
- 
-    
-    
-
 }

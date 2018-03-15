@@ -82,6 +82,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
            namelbl.text! = (datasPlace["name"] as! String?)!
         coordinates_X = Double(datasPlace["coordinates_X"] as! String)!
         coordinates_Y = Double(datasPlace["coordinates_Y"] as! String)!
+        commentTXV.keyboardAppearance = .dark
         
 
        

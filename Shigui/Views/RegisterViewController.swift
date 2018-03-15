@@ -60,6 +60,10 @@ class RegisterViewController: UIViewController {
         nameTxf.keyboardAppearance = .dark
         passwordTxf.keyboardAppearance = .dark
         repeatPasswordTxf.keyboardAppearance = .dark
+        nameTxf.autocorrectionType = .no
+        passwordTxf.autocorrectionType = .no
+        repeatPasswordTxf.autocorrectionType = .no
+        emailTxf.autocorrectionType = .no
          let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.dismissKeyboard))
      view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.

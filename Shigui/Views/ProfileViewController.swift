@@ -79,6 +79,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         view.addGestureRecognizer(tap)
         nameTXF.keyboardAppearance = .dark
         emailTXF.keyboardAppearance = .dark
+        nameTXF.autocorrectionType = .no
+        emailTXF.autocorrectionType = .no
         getValuations()
         comentaryLbl.text = "coment".localized()
         myTableView.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0)
@@ -88,10 +90,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         // Do any additional setup after loading the view.
     }
-    override func awakeFromNib() {
-        getValuations()
-        getUser()
-    }
+    
     
     @objc func deleteComment(_ notification: Notification){
         
@@ -646,6 +645,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("-----------------------------> cell")
         print(datasFavorite.count)
+        
         return datasFavorite.count
         
     }
